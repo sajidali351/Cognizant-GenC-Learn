@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="dateFormat" class="java.text.SimpleDateFormat">
+		<constructor-arg value="dd/MM/yyyy" />
+	</bean>
+
+	<bean id="emp1" class="com.cts.model.Employee">
+		<property name="id" value="1001"></property>
+		<property name="name" value="Ali"></property>
+		<property name="salary" value="50000"></property>
+		<property name="department" ref="dept1"></property>
+		<property name="permanent" value="Full Time"></property>
+		<property name="dateOfBirth">
+			<bean factory-bean="dateFormat" factory-method="parse">
+				<constructor-arg value="20/07/1999" />
+			</bean>
+		</property>
+		<property name="skill" ref="skill1"></property>
+
+	</bean>
+
+	<bean id="emp2" class="com.cts.model.Employee">
+		<property name="id" value="1002"></property>
+		<property name="name" value="Kumar"></property>
+		<property name="salary" value="60000"></property>
+		<property name="department" ref="dept2"></property>
+		<property name="permanent" value="Full Time"></property>
+		<property name="dateOfBirth">
+			<bean factory-bean="dateFormat" factory-method="parse">
+				<constructor-arg value="10/03/1990" />
+			</bean>
+		</property>
+		<property name="skill" ref="skill2"></property>
+
+	</bean>
+
+	<bean id="emp3" class="com.cts.model.Employee">
+		<property name="id" value="1003"></property>
+		<property name="name" value="Rawal" />
+		<property name="salary" value="70000" />
+		<property name="department" ref="dept3"></property>
+		<property name="permanent" value="Intern"></property>
+		<property name="dateOfBirth">
+			<bean factory-bean="dateFormat" factory-method="parse">
+				<constructor-arg value="12/04/2000" />
+			</bean>
+		</property>
+		<property name="skill" ref="skill3"></property>
+	</bean>
+        
+	
+	
+
+	<bean id="dept1"
+		class="com.cts.model.Department">
+
+		<property name="id" value="101"></property>
+		<property name="name" value="Front End Development"></property>
+
+	</bean>
+
+	<bean id="dept2"
+		class="com.cts.model.Department">
+
+		<property name="id" value="102"></property>
+		<property name="name" value="Machine Learning"></property>
+
+	</bean>
+
+	<bean id="dept3"
+		class="com.cts.model.Department">
+
+		<property name="id" value="103"></property>
+		<property name="name" value="Data Science"></property>
+
+	</bean>
+	
+	<bean id="skill1" class="com.cts.model.Skill">
+		<property name="id" value="001"></property>
+		<property name="name" value="Logical Analysis"></property>
+	</bean>
+
+	<bean id="skill2" class="com.cts.model.Skill">
+		<property name="id" value="002"></property>
+		<property name="name" value="Decoding"></property>
+	</bean>
+	
+	<bean id="skill3" class="com.cts.model.Skill">
+		<property name="id" value="003"></property>
+		<property name="name" value="Communication"></property>
+	</bean>
+
+	<bean id="employeeList" class="java.util.ArrayList">
+		<constructor-arg>
+			<list>
+				<ref bean="emp1"></ref>
+				<ref bean="emp2"></ref>
+				<ref bean="emp3"></ref>
+				
+			</list>
+		</constructor-arg>
+	</bean>
+
+	<bean id="departmentList" class="java.util.ArrayList">
+		<constructor-arg>
+			<list>
+				<ref bean="dept1"></ref>
+				<ref bean="dept2"></ref>
+				<ref bean="dept3"></ref>
+
+			</list>
+		</constructor-arg>
+
+	</bean>
+</beans>

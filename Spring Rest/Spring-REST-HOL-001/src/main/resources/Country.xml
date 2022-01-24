@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="country" class="com.cognizant.model.Country"
+		scope="prototype" />
+	<bean id="in" class="com.cognizant.model.Country">
+		<property name="code" value="IN" />
+		<property name="name" value="India" />
+	</bean>
+	<bean id="us" class="com.cognizant.model.Country">
+		<property name="code" value="US" />
+		<property name="name" value="United State" />
+	</bean>
+	<bean id="de" class="com.cognizant.model.Country">
+		<property name="code" value="DE" />
+		<property name="name" value="Germany" />
+	</bean>
+	<bean id="jp" class="com.cognizant.model.Country">
+		<property name="code" value="JP" />
+		<property name="name" value="Japan" />
+	</bean>
+
+	<bean id="countryList" class="java.util.ArrayList">
+		<constructor-arg>
+			<list>
+				<ref bean="in"></ref>
+				<ref bean="us"></ref>
+				<ref bean="de"></ref>
+				<ref bean="jp"></ref>
+			</list>
+		</constructor-arg>
+	</bean>
+
+</beans>
