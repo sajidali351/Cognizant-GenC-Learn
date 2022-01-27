@@ -1,0 +1,31 @@
+body{
+    font-family: sans-serif;
+}
+
+table,tr,td{
+    background-color: #E8DCFF;
+    border: 1px solid;
+    border-collapse: collapse
+    
+}
+
+input{
+    background-color: #FEFFB0;
+    font-weight: bold;
+    text-align: right;
+}
+
+#sumLabel{
+    text-align: right;
+    color: #174C68;
+    font-weight: bold;
+    font-size: 18px;
+    
+}
+
+#result{
+    text-align: center;
+    color: #174C68;
+    font-weight: bold;
+    font-size: 18px;
+}
