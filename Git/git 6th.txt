@@ -1,0 +1,8 @@
+git status
+
+git branch
+
+git pull origin master
+
+git push GitDemo master
+

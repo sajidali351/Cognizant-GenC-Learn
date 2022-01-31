@@ -1,0 +1,48 @@
+git status
+
+git checkout -b GitWork
+
+echo "<xml></xml>" >> hello.xml
+
+git add hello.xml
+
+git status
+
+git commit -m "1st"
+
+git push -u origin GitWork
+
+git checkout master
+
+echo "<title></title>" >> hello.xml
+
+git add hello.xml
+
+git commit -m "1st in master"
+
+git push
+
+git log oneline --graph --decorate --all
+
+git diff --name-status master GitWork
+
+git merge GitWork
+
+git mergetool
+
+git commit -m "done"
+
+git status
+
+echo "*~" >> .gitignore
+
+git commit -m "backup"
+
+git branch 
+
+git branch -d GitWork
+
+git log --oneline --graph --decorate
+
+
+

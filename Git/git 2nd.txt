@@ -1,0 +1,16 @@
+git log > log.log
+
+touch .gitignore
+
+In .gitignore file 
+*.log
+log_folder
+
+mkdir log_folder
+
+git add .gitignore
+
+git commit -m "Adding gitignore"
+
+git push
+

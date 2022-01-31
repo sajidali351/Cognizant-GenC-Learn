@@ -1,0 +1,33 @@
+git version
+
+git config --global user.name "our_username"
+
+git config --global --list
+
+notepad++
+
+git config --global core.editor "notepad++.exe -multiInst -nosession"
+
+git config --global --edit
+
+git init GitDemo
+
+ls -al
+
+echo "Welcome to the version control" >> welcome.txt
+
+ls -al
+
+cat welcome.txt
+
+git status
+
+git add welcome.txt
+
+git commit
+
+git status
+
+git pull origin master
+
+git push origin master

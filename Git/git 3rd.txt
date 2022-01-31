@@ -1,0 +1,25 @@
+git checkout -b GitNewBranch
+
+git branch
+
+git checkout GitNewBranch
+
+echo "Hello I am person" >> hello.txt
+
+git add hello.txt
+
+git commit -m "1st commit for hello"
+
+git push 
+
+git status
+
+git checkout master
+
+git diff --name-status master GitNewBranch
+
+git log --online --graph --decorate
+
+git branch -d GitNewBranch
+
+git status

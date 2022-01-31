@@ -1,0 +1,131 @@
+<html>
+<head>
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link
+    rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <style>
+    body {
+    padding-top: 70px;
+    font-family: 'Lato',sans-serif;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active {
+    outline: 0;
+}
+
+.navbar-toggler span {
+   display: block;
+   background-color: #444;
+   height: 3px;
+   width: 25px;
+   margin-top: 4px;
+   margin-bottom: 4px;
+   -webkit-transform: rotate(0deg);
+   -moz-transform: rotate(0deg);
+   -o-transform: rotate(0deg);
+   transform: rotate(0deg);
+   position: relative;
+   left: 0;
+   opacity: 1;
+}
+
+.navbar-toggler span:nth-child(1),
+.navbar-toggler span:nth-child(3) {
+   -webkit-transition: transform .35s ease-in-out;
+   -moz-transition: transform .35s ease-in-out;
+   -o-transition: transform .35s ease-in-out;
+   transition: transform .35s ease-in-out;
+}
+
+.navbar-toggler:not(.collapsed) span:nth-child(1) {
+    position: absolute;
+    left: 12px;
+    top: 10px;
+    -webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+    transform: rotate(135deg);
+    opacity: 0.9;
+}
+
+.navbar-toggler:not(.collapsed) span:nth-child(2) {
+    height: 12px;
+    visibility: hidden;
+    background-color: transparent;
+}
+
+.navbar-toggler:not(.collapsed) span:nth-child(3) {
+    position: absolute;
+    left: 12px;
+    top: 10px;
+    -webkit-transform: rotate(-135deg);
+    -moz-transform: rotate(-135deg);
+    -o-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+    opacity: 0.9;
+}
+
+.float-right{
+  float:right;
+}
+  </style>
+</head>
+
+<body> 
+<nav class="navbar navbar-1 fixed-top bg-dark">
+  <a class="navbar-brand text-secondary" href="#"> hTrack </a>
+  <div class="fluid-container">
+  <button class="navbar-toggler collapsed position-relative" type="button" data-toggle="collapse" data-target="#navbarSupport">
+      <span> </span>
+      <span> </span>
+      <span> </span>
+      
+  </button>
+  </div>
+  
+  <div class="collapse navbar-collapse" id="navbarSupport">
+      <ul class="nav navbar-nav">
+          <li class="nav-item">
+              <a class="nav-link text-secondary" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link text-secondary" href="#">Goals</a>
+          </li>
+      </ul>
+  </div>
+</nav>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-9" style="background-color: rgb(220, 243, 220)">
+      <h3>Benefits</h3>
+      <ul>
+        <li>Set Goals</li>
+
+        <li>Receive customized notifications</li>
+
+        <li>Get tips from experts and coaches</li>
+      </ul>
+    </div>
+
+    <div class="col-sm-3" style="background-color: rgb(250, 224, 250)">
+      <h3>Login</h3>
+    </div>
+  </div>
+</div>
+</body>
+</html>

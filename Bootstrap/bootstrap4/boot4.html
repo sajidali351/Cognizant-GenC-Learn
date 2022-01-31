@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+
+    <title></title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+    <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
+
+    <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+
+    <script>
+        function f() {
+            document.getElementById("button").style.backgroundColor = "green";
+        }
+    </script>
+</head>
+
+<body>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+    <nav class="navbar navbar-light navbar-1 bg-dark">
+        <a class="navbar-brand text-white" href="#">Payroll</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupport"
+            aria-controls="navbarSupport" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse text-white" id="navbarSupport">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#" style="color: white">Home <span class="sr-only">(current)</span></a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#" style="color: white">Goals</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <h2>New Employee</h2>
+
+        <div class="row">
+            <div class="col-sm-4">
+                <label for="fname">First Name</label>
+
+                <input type="text" class="form-control" id="fname" required />
+            </div>
+
+            <div class="col-sm-4">
+                <label for="mname">Middle Name</label>
+
+                <input type="text" class="form-control" id="mname" />
+            </div>
+
+            <div class="col-sm-4">
+                <label for="lname">Last Name</label>
+
+                <input type="text" class="form-control" id="lname" required />
+            </div>
+        </div>
+        <br>
+
+        <div class="row">
+            <div class="col-sm-6">
+                <label for="ad1">Address Line 1 </label>
+
+                <input type="text" class="form-control" id="ad1" required />
+            </div>
+            
+
+            <div class="col-sm-6">
+                <label for="ad2">Address Line 2 </label>
+
+                <input type="text" class="form-control" id="ad2" />
+            </div>
+        </div>
+        <br>
+
+        <div class="row">
+            <div class="col-sm-6">
+                <label for="email">Email</label>
+
+                <input type="email" class="form-control" id="email" required />
+            </div>
+
+            <div class="col-sm-3">
+                <label for="pwd">Password</label>
+
+                <input type="password" class="form-control" id="pass" required />
+            </div>
+
+            <div class="col-sm-3">
+                <label for="cpwd">Confirm Password</label>
+
+                <input type="password" class="form-control" id="cpass" required />
+
+            </div>
+        </div>
+        <br>
+
+        <div class="row">
+            <div class="col-sm-3">
+                <label for="dept">Department</label>
+
+                <select name="dept" id="dept" style="width: 100%" required>
+                    <option value=""></option>
+
+                    <option value="ece">ECE</option>
+
+                    <option value="it">IT</option>
+
+                    <option value="eee">EEE</option>
+
+                    <option value="cse">CSE</option>
+                </select>
+                <br>
+            </div>
+
+            <div class="col-sm-3">
+                <label for="dob">Date of Birth</label>
+
+                <input id="datepicker" width="300" style="background-color: white; width: 100%" />
+
+                <script>
+                    $("#datepicker").datepicker()({
+                        format: "dd/mm/yy",
+                    });
+                </script>
+                <br>
+            </div>
+
+            <div class="col-sm-3">
+                <label for="g">Gender</label><br />
+
+                <input type="radio" id="male" name="gender" value="male" />
+
+                <label for="male">Male</label>
+
+                <input type="radio" id="female" name="gender" value="female" />
+
+                <label for="female">Female</label>
+            </div>
+
+            <div class="col-sm-3">
+                <label for="p">Permanent</label>
+
+                <input type="checkbox" class="form-control" style="width: 3%; color: black" required />
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-1">
+                <button type="button" id="button" class="btn btn-primary" onclick="f()">
+                    Save
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
